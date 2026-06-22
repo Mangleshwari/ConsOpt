@@ -1,4 +1,4 @@
-# ConsOpt: Intelligent Constrained Optimization
+# ConsOpt: Simplified Constrained Optimization With Automatic Bounds Handling
 
 **ConsOpt** ia a user-friendly R package that simplifies constrained and unconstrained optimization with automatic bounds handling and optional convergence visualization.
 
