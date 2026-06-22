@@ -344,11 +344,11 @@ to execute all examples.
 ## Example Output
 
 ```r
-✅ runme.R executed all test cases successfully!
+runme.R executed all test cases successfully!
 ```
 
 ---
 
 ## License
 
-MIT License
+MIT + file LICENSE
