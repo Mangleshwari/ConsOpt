@@ -1,8 +1,6 @@
 # ConsOpt
-A user-friendly R package that simplifies constrained optimization with automatic bounds handling and optional convergence visualization
-# ConsOpt
 
-**ConsOpt** is an R package for constrained optimization that provides a unified interface to solve a wide range of optimization problems.
+**ConsOpt** ia a user-friendly R package that simplifies constrained optimization with automatic bounds handling and optional convergence visualization.
 
 The package automatically selects suitable optimization algorithms based on the problem structure, supporting:
 
