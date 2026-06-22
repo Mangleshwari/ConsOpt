@@ -35,6 +35,7 @@ The package automatically selects suitable optimization algorithms based on the 
 
 ```r
 # Install from GitHub
+install.packages("remotes")
 remotes::install_github("yourusername/ConsOpt")
 ```
 
