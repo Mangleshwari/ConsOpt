@@ -1,0 +1,18 @@
+Package: ConsOpt
+Title: Simplified Constrained Optimization With Automatic Bounds
+        Handling
+Version: 0.1.0
+Authors@R: 
+    person("Mangleshwari", " ", , "mangleshwari144@gmail.com", role = c("aut", "cre"))
+Description: A user-friendly R package that simplifies constrained optimization with automatic bounds handling and optional convergence visualization
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: lpSolve, stats, utils, nloptr, DEoptim, ggplot2, shiny,
+        patchwork
+Suggests: gganimate, transformr, gifski
+NeedsCompilation: no
+Packaged: 2026-04-04 10:04:12 UTC; MANGLESHWARI
+Author: Mangleshwari [aut, cre]
+Maintainer: Mangleshwari <mangleshwari144@gmail.com>
