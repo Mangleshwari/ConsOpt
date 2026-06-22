@@ -1,6 +1,10 @@
 # ConsOpt
 
-**ConsOpt** ia a user-friendly R package that simplifies constrained optimization with automatic bounds handling and optional convergence visualization.
+**ConsOpt** ia a user-friendly R package that simplifies constrained and unconstrained optimization with automatic bounds handling and optional convergence visualization.
+
+Many optimization packages in R are powerful, but choosing the right optimizer often feels like a guessing game. Should you use Nelder-Mead or BFGS? Is your objective function smooth? Does it contain equality or inequality constraints? Will the selected solver even converge?
+
+Inspired by the ease-of-use philosophy of MATLAB's optimization toolbox, ConsOpt aims to provide a unified interface that automatically selects suitable optimization algorithms based on the problem structure, reducing the burden of manual solver selection.
 
 The package automatically selects suitable optimization algorithms based on the problem structure, supporting:
 
@@ -29,7 +33,36 @@ The package automatically selects suitable optimization algorithms based on the 
 
 * Built-in visualization of optimization results
 
+## Traditional Workflow
+
+For a simple objective function,
+
+```r
+f <- function(x) x[1]^2 + x[2]^2
+```
+
+users often need to experiment with different optimizers manually:
+
+```r
+optim(c(2,3), f, method = "Nelder-Mead")
+
+optim(c(2,3), f, method = "BFGS")
+```
+
+Selecting the appropriate method requires prior knowledge of the problem characteristics and optimizer behavior.
+
 ---
+
+## Meet ConsOpt
+
+ConsOpt does not simply solve optimization problems—it analyzes them.
+
+The package automatically inspects the objective function and constraints to choose a suitable optimization strategy, whether that is:
+
+BFGS for smooth differentiable objectives
+Nelder-Mead for derivative-free optimization
+Differential Evolution for global optimization
+Hybrid approaches combining global and local search
 
 ## Installation
 
@@ -44,8 +77,60 @@ Load the package:
 ```r
 library(ConsOpt)
 ```
+---
+## Quick Start
+library(ConsOpt)
+```r
+f <- function(x) x[1]^2 + x[2]^2
+
+res <- consopt(
+  f,
+  par = c(2,3),
+  plot_results = TRUE
+)
+```
+Animate the optimization path:
+
+```r
+animate_consopt(res)  # Requires gganimate (optional)
+```
+
+Visualize convergence:
+
+```r
+plot(res)
+```
+---
+
+## Visualization
+
+ConsOpt not only finds solutions but also shows how they are obtained.
+
+The package provides:
+
+Convergence plots
+Contour visualizations
+Optimization path tracking
+Animated optimization trajectories
+
+These tools help users understand optimizer behavior, diagnose convergence issues, and compare algorithm performance.
 
 ---
+
+## Constraint Handling
+
+ConsOpt automatically validates and manages:
+
+Equality constraints
+Inequality constraints
+Variable bounds
+Linear constraints
+
+allowing users to focus on modeling rather than solver-specific implementation details.
+
+## Goal
+
+The goal of ConsOpt is to make optimization in R more accessible, reproducible, and intuitive by combining automatic solver selection, constraint management, and rich visualization within a single framework.
 
 ## Basic Usage
 
