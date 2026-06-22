@@ -15,19 +15,19 @@ The package automatically selects suitable optimization algorithms based on the 
 
 ## Features
 
-✅ Automatic optimizer selection
+* Automatic optimizer selection
 
-✅ Support for smooth and non-smooth objective functions
+* Support for smooth and non-smooth objective functions
 
-✅ Equality and inequality constraints
+* Equality and inequality constraints
 
-✅ Linear programming interface
+* Linear programming interface
 
-✅ Global optimization via Differential Evolution
+* Global optimization via Differential Evolution
 
-✅ Hybrid optimization (global + local refinement)
+* Hybrid optimization (global + local refinement)
 
-✅ Built-in visualization of optimization results
+* Built-in visualization of optimization results
 
 ---
 
